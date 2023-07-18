@@ -4,10 +4,65 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>Rock Paper Scissors</title>
 </head>
 <body>
+    
+    <!-- Heading -->
+    <h1 class="heading">Rock Paper Scissors</h1>
+
+    <!-- Rules-->
+    <div class="rules">Rules:
+        
+        <p>Rock crushes scissors, Paper covers rock and Scissors cut paper.</p>
+    
+    </div>
+
+    <div class="game-container">
+        <!-- Game area -->
+        <div class="game-area" id="player-choice">
+            <p>Make Your Choice</p>
+    
+            <button class="btn rocks" data-type="rock"><img src="assets/images/stone.png" alt="stone">Rock</button>
+    
+            <button class="btn papers" data-type="paper"><img src="assets/images/file.png" alt="paper">Paper</button>
+    
+            <button class="btn scissors" data-type="scissor"><img src="assets/images/scissor.png"
+                    alt="scissors">Scissor</button>
+        </div>
+
+        <div class="game-area" id="computer-choice">
+            <p>Computer Choice</p>
+        
+            <button data-type="rock"><img src="assets/images/stone.png" alt="stone">Rock</button>
+        
+            <button data-type="paper"><img src="assets/images/file.png" alt="paper">Paper</button>
+        
+            <button data-type="scissor"><img src="assets/images/scissor.png" alt="scissors">Scissor</button>
+        
+        </div>
+
+        <!-- Score -->
+        <div class="score-area">
+            <p class="scores">Wins <span id="win">0</span></p>
+            <p class="scores">Losses <span id="loss">0</span></p>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">Created By: RT Guinn</div>
+
+    </div>
+
+
     
     <script src="assets/js/script.js"></script>
 </body>
