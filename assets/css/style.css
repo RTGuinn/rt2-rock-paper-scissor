@@ -23,6 +23,7 @@ h1 {
     font-size: 1.5em;
 }
 
+/* Game area style */
 .game-container {
     display: flex;
     flex-direction: column;
@@ -44,12 +45,19 @@ h1 {
     margin: 30px;
 }
 
+/* Score area styles*/
 .score-area {
     margin: 5px auto;
     width: 60%;
     font-size: 2em;
     display: flex;
     justify-content: center;
+}
+
+.scores {
+    color: ivory;
+    display: inline-block;
+    padding: 25px;
 }
 
 #win {
@@ -60,4 +68,14 @@ h1 {
 #loss {
     color: red;
     font-weight: bold;
+}
+
+/* Button styles */
+.btn {
+    font-family: 'VT323', monospace;
+    font-size: 1.2rem;
+}
+
+.btn:active, .btn:hover {
+    background-color: cadetblue;
 }
