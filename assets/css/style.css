@@ -23,3 +23,23 @@ h1 {
     font-size: 1.5em;
 }
 
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-area {
+    margin-top: 20px;
+    background: darkslategray;
+    border: 2px solid ivory;
+}
+
+.game-area p {
+    color: ivory;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin: 30px;
+}
