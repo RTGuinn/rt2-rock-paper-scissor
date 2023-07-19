@@ -13,6 +13,13 @@ h1 {
     margin-bottom: 20px;
 }
 
+/* Rule button */
+#ruleBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Rules style */
 .rules {
     background-color: gray;

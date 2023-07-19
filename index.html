@@ -21,10 +21,12 @@
     <h1 class="heading">Rock Paper Scissors</h1>
 
     <!-- Rules-->
-    <div class="rules">Rules:
-        
-        <p>Rock crushes scissors, Paper covers rock and Scissors cut paper.</p>
-    
+    <button id = "ruleBtn">Rules</button>
+    <div class="rules" id="myRules">
+        <div class="rule-content">
+            <span class="close">&times;</span>
+            <p>Rock crushes scissors, Paper covers rock and Scissors cut paper.</p>
+        </div>    
     </div>
 
     <section class="game-container">
@@ -32,7 +34,7 @@
         <div class="game-area" id="player-choice">
             <p>Make Your Choice</p>
     
-            <button class="btn rocks" data-type="rock"><img src="assets/images/stone.png" alt="stone"></button>
+            <button class="btn rocks" data-type="rock"><img src="assets/images/stone.png" alt="rock"></button>
     
             <button class="btn papers" data-type="paper"><img src="assets/images/file.png" alt="paper"></button>
     
@@ -43,11 +45,11 @@
         <div class="game-area" id="computer-choice">
             <p>Computer Choice</p>
         
-            <button data-type="rock"><img src="assets/images/stone.png" alt="stone"></button>
+            <img src="assets/images/stone.png" alt="rock">
         
-            <button data-type="paper"><img src="assets/images/file.png" alt="paper"></button>
+            <img src="assets/images/file.png" alt="paper">
         
-            <button data-type="scissor"><img src="assets/images/scissor.png" alt="scissors"></button>
+            <img src="assets/images/scissor.png" alt="scissors">
         
         </div>
     </section>
