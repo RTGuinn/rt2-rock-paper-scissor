@@ -15,6 +15,9 @@ h1 {
 
 /* Rule button */
 #ruleBtn {
+    font-family: 'VT323', monospace;
+    font-size: 2em;
+    color: darkslategray;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,12 +25,27 @@ h1 {
 
 /* Rules style */
 .rules {
+    display: none;
     background-color: gray;
-    color: ivory;
-    border: 1px solid;
-    display: flex;
-    justify-content: center;
-    font-size: 1.5em;
+    position: relative;
+    z-index: 1;
+    color: ivory;   
+}
+
+/* Rules content */
+.rule-content {
+    background-color: gray;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid ivory;
+    margin-bottom: 10px;
+}
+
+/* Rules for modal close button */
+.close {
+    color: black;
+    float: right;
+    font-size: 30px;
 }
 
 /* Game area style */
