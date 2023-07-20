@@ -10,12 +10,15 @@ var span = document.getElementsByClassName("close")[0];
 button.onclick = function() {
     modal.style.display = "block";
 };
-// Close modal when X is clicked on
+// Close modal box when X is clicked 
 span.onclick = function () {
     modal.style.display = "none";
 };
 
 function playerChoice() {
+
+    // Declare variables to use in function for player choice
+    var user = "";
 
 }
 
@@ -29,6 +32,7 @@ function computerChoice() {
  */
 function compareChoices(playerChoice, computerChoice) {
 
+    // Take player choice and compares to computer random pick to declare winner
     if (playerChoice === computerChoice) {
         return "It's a tie!";
     } else if (

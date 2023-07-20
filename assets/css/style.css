@@ -23,12 +23,19 @@ h1 {
     align-items: center;
 }
 
+/* Rule button hover style */
+#ruleBtn:hover,
+#ruleBtn:focus {
+    background-color: darkslategray;
+    color: ivory;
+}
+
 /* Rules style */
 .rules {
     display: none;
     background-color: gray;
     position: relative;
-    z-index: 1;
+    z-index: 100;
     color: ivory;   
 }
 
