@@ -12,17 +12,18 @@ const choices = ["rock", "paper", "scissors"];
 
 // Function for computer random generated choice
 function computerChoice() {
-    // Random choice generator gets own function
+    
+    // Random choice generator gets own function for necessity in other functions
     const randomChoice = Math.floor(Math.random() * 3);
     return choices[randomChoice];
 }
-console.log(computerChoice());
-
 
 
 // Game function for gamePlay function to work for playerChoice
 function game(playerChoice) {
-    //console.log("good to go " + playerChoice);
+    const compChoice = computerChoice();
+    console.log("user = " + playerChoice);
+    console.log("compChoice = " + compChoice);
 }
 
 
@@ -32,16 +33,17 @@ function game(playerChoice) {
  */
 function gamePlay() {
 
+    // Rock button 
     rock.addEventListener('click', function() {
         game("rock");
         
     })
-
+    // Paper button
     paper.addEventListener('click', function () {
         game("paper");
         
     })
-
+    // Scissors button
     scissors.addEventListener('click', function () {
         game("scissors");
         
