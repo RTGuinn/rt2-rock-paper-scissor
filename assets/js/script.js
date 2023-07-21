@@ -9,7 +9,17 @@ const rock = document.getElementById("rock");
 const paper = document.getElementById("paper");
 const scissors = document.getElementById("scissors");
 
+rock.addEventListener('click', function() {
+    console.log("rock is working");
+})
 
+paper.addEventListener('click', function () {
+    console.log("paper is working");
+})
+
+scissors.addEventListener('click', function () {
+    console.log("scissors is working");
+})
 
 function playerChoice() {
 
