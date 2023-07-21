@@ -9,9 +9,11 @@ const rock = document.getElementById("rock");
 const paper = document.getElementById("paper");
 const scissors = document.getElementById("scissors");
 
+// Game function for gamePlay function to work
+function game(playerChoice) {
+    console.log("good to go" + playerChoice);
+}
 
-// First function to run when game is loaded
-gamePlay();
 
 /**
  * This function runs the main part of the gameplay actions
@@ -34,6 +36,10 @@ function gamePlay() {
         
     })
 }
+
+// Function to run game
+gamePlay();
+
 
 function playerChoice() {
 
