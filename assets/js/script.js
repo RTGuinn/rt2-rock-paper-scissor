@@ -1,4 +1,14 @@
 // Define all variables to be used in functions 
+let playerScore = 0;
+let computerScore = 0;
+const win = document.getElementById("win");
+const loss = document.getElementById("loss");
+const scoreArea = document.querySelector(".score-area");
+const result = document.querySelector(".result");
+const rock = document.getElementById("rock");
+const paper = document.getElementById("paper");
+const scissors = document.getElementById("scissors");
+
 
 
 function playerChoice() {

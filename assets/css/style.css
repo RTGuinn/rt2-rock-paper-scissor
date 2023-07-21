@@ -108,6 +108,7 @@ h1 {
 .btn {
     font-family: 'VT323', monospace;
     font-size: 1.2rem;
+    border-radius: 50%;
 }
 
 .btn:active, .btn:hover {
