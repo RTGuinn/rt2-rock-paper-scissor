@@ -1,3 +1,6 @@
+// Define all variables to be used in functions 
+
+
 function playerChoice() {
 
 }
