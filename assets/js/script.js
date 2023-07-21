@@ -8,10 +8,21 @@ const result = document.querySelector(".result");
 const rock = document.getElementById("rock");
 const paper = document.getElementById("paper");
 const scissors = document.getElementById("scissors");
+const choices = ["rock", "paper", "scissors"];
 
-// Game function for gamePlay function to work
+// Function for computer random generated choice
+function computerChoice() {
+    // Random choice generator gets own function
+    const randomChoice = Math.floor(Math.random() * 3);
+    return choices[randomChoice];
+}
+console.log(computerChoice());
+
+
+
+// Game function for gamePlay function to work for playerChoice
 function game(playerChoice) {
-    console.log("good to go" + playerChoice);
+    //console.log("good to go " + playerChoice);
 }
 
 
@@ -40,14 +51,6 @@ function gamePlay() {
 // Function to run game
 gamePlay();
 
-
-function playerChoice() {
-
-}
-
-function computerChoice() {
-
-}
 
 /**
  * This function compares the player choice to the computer random choice
