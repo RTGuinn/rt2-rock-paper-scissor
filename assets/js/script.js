@@ -1,24 +1,4 @@
-/**
- * Function for rules button modal
- */
-// Declare variables for button and close button inside modal
-var modal = document.getElementById("myRules");
-var button = document.getElementById("ruleBtn");
-var span = document.getElementsByClassName("close")[0];
-
-// Open modal when user clicks on button
-button.onclick = function() {
-    modal.style.display = "block";
-};
-// Close modal box when X is clicked 
-span.onclick = function () {
-    modal.style.display = "none";
-};
-
 function playerChoice() {
-
-    // Declare variables to use in function for player choice
-    var user = "";
 
 }
 
@@ -54,3 +34,19 @@ function incrementLoss() {
 
 }
 
+/**
+ * Function for rules button modal
+ */
+// Declare variables for button and close button inside modal
+var modal = document.getElementById("myRules");
+var button = document.getElementById("ruleBtn");
+var span = document.getElementsByClassName("close")[0];
+
+// Open modal when user clicks on button
+button.onclick = function () {
+    modal.style.display = "block";
+};
+// Close modal box when X is clicked 
+span.onclick = function () {
+    modal.style.display = "none";
+};
