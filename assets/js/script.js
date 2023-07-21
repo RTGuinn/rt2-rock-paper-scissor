@@ -9,17 +9,31 @@ const rock = document.getElementById("rock");
 const paper = document.getElementById("paper");
 const scissors = document.getElementById("scissors");
 
-rock.addEventListener('click', function() {
-    console.log("rock is working");
-})
 
-paper.addEventListener('click', function () {
-    console.log("paper is working");
-})
+// First function to run when game is loaded
+gamePlay();
 
-scissors.addEventListener('click', function () {
-    console.log("scissors is working");
-})
+/**
+ * This function runs the main part of the gameplay actions
+ * when a player makes their choice 
+ */
+function gamePlay() {
+
+    rock.addEventListener('click', function() {
+        game("rock");
+        
+    })
+
+    paper.addEventListener('click', function () {
+        game("paper");
+        
+    })
+
+    scissors.addEventListener('click', function () {
+        game("scissors");
+        
+    })
+}
 
 function playerChoice() {
 
