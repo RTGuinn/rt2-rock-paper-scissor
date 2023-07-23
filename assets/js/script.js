@@ -1,4 +1,4 @@
-// Define all variables to be used in functions 
+// Define all variables to be used in functions for HTML (DOM cache)
 let playerScore = 0;
 let computerScore = 0;
 const win = document.getElementById("win");
@@ -10,21 +10,40 @@ const paper = document.getElementById("paper");
 const scissors = document.getElementById("scissors");
 const choices = ["rock", "paper", "scissors"];
 
+
+
 // Function for computer random generated choice
 function computerChoice() {
     
-    // Random choice generator gets own function for necessity in other functions
+    // Random choice generator gets own function for necessity in other function
     const randomChoice = Math.floor(Math.random() * 3);
     return choices[randomChoice];
 }
 
 
-// Game function for gamePlay function to work for playerChoice
+// Game function for gamePlay function to work for playerChoice and compare
 function game(playerChoice) {
+    
     const compChoice = computerChoice();
-    console.log("user = " + playerChoice);
-    console.log("compChoice = " + compChoice);
-}
+    
+    if (playerChoice === compChoice) {
+            console.log("its a tie") 
+            
+        } else if (playerChoice === "rock" && compChoice === "scissors") {
+
+        } else if (playerChoice === "paper" && compChoice === "rock") {
+
+        } else if (playerChoice === "scissors" && compChoice === "paper") {
+            console.log("you win");
+        } else 
+            console.log("you lose, try again!");
+        
+    }
+
+game("RT");
+
+
+
 
 
 /**
@@ -54,25 +73,6 @@ function gamePlay() {
 gamePlay();
 
 
-/**
- * This function compares the player choice to the computer random choice
- * and tells whether you win or lose the game  
- */
-function compareChoices(playerChoice, computerChoice) {
-
-    // Take player choice and compares to computer random pick to declare winner
-    if (playerChoice === computerChoice) {
-        return "It's a tie!";
-    } else if (
-        (playerChoice === "rock" && computerChoice === "scissor") ||
-        (playerChoice === "paper" && computerChoice === "rock") ||
-        (playerChoice === "scissor" && computerChoice === "paper")
-    ) {
-        return "You Win! Yay!";
-    } else {
-        return "You Lose! Sorry, try again!";
-    }
-}
 
 function incrementWin() {
 
