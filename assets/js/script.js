@@ -1,10 +1,10 @@
 // Define all variables to be used in functions for HTML (DOM cache)
 let playerScore = 0;
 let computerScore = 0;
-const win = document.getElementById("win");
-const loss = document.getElementById("loss");
+const winner = document.getElementById("win");
+const loser = document.getElementById("loss");
 const scoreArea = document.querySelector(".score-area");
-const result = document.querySelector(".result");
+const result = document.querySelector(".result > p");
 const rock = document.getElementById("rock");
 const paper = document.getElementById("paper");
 const scissors = document.getElementById("scissors");
@@ -13,7 +13,7 @@ const choices = ["rock", "paper", "scissors"];
 
 
 // Function for computer random generated choice
-function computerChoice() {
+function genComputerChoice() {
     
     // Random choice generator gets own function for necessity in other function
     const randomChoice = Math.floor(Math.random() * 3);
@@ -21,28 +21,41 @@ function computerChoice() {
 }
 
 
+function tie() {
+    console.log("Its a tie")
+}
+
+function wins() {
+    
+    playerScore++;
+    winner.innerText = playerScore;
+    loser.innerHTML = computerScore;
+    
+}
+
+function lose() {
+    console.log("Loser");
+}
+
+
 // Game function for gamePlay function to work for playerChoice and compare
 function game(playerChoice) {
     
-    const compChoice = computerChoice();
+    const compChoice = genComputerChoice();
     
     if (playerChoice === compChoice) {
-            console.log("its a tie") 
+            tie();
             
         } else if (playerChoice === "rock" && compChoice === "scissors") {
-
+        return wins();
         } else if (playerChoice === "paper" && compChoice === "rock") {
-
+        return wins();
         } else if (playerChoice === "scissors" && compChoice === "paper") {
-            console.log("you win");
+        return wins();
         } else 
-            console.log("you lose, try again!");
+            lose();
         
     }
-
-game("RT");
-
-
 
 
 
