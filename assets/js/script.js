@@ -30,10 +30,14 @@ function wins() {
     playerScore++;
     winner.innerText = playerScore;
     loser.innerHTML = computerScore;
-    
+    console.log("Winner");
 }
 
 function lose() {
+    
+    computerScore++;
+    winner.innerText = playerScore;
+    loser.innerHTML = computerScore;
     console.log("Loser");
 }
 
@@ -87,13 +91,6 @@ gamePlay();
 
 
 
-function incrementWin() {
-
-}
-
-function incrementLoss() {
-
-}
 
 /**
  * Function for rules button modal
