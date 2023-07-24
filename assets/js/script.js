@@ -12,54 +12,68 @@ const choices = ["rock", "paper", "scissors"];
 
 
 
-// Function for computer random generated choice
+/**
+ * Function to generate random computer choice
+ */
 function genComputerChoice() {
-    
+
     // Random choice generator gets own function for necessity in other function
     const randomChoice = Math.floor(Math.random() * 3);
     return choices[randomChoice];
 }
 
 
-function tie() {
-    console.log("Its a tie")
+function tie(playerChoice, compChoice) {
+    
+    result.innerHTML = `${playerChoice} matches ${compChoice} Its a tie, Let's go again :)`;
+    console.log("Its a tie");
 }
 
-function wins() {
-    
+/**
+ * Function to increase player score after player wins 
+ */
+
+function wins(playerChoice, compChoice) {
+
     playerScore++;
     winner.innerText = playerScore;
     loser.innerHTML = computerScore;
+    result.innerHTML = `${playerChoice} beats ${compChoice} Winner!!!`;
     console.log("Winner");
 }
 
-function lose() {
-    
+
+/**
+ * Function to increase computer score after player loses
+ */
+function lose(playerChoice, compChoice) {
+
     computerScore++;
     winner.innerText = playerScore;
     loser.innerHTML = computerScore;
+    result.innerHTML = `${compChoice} beats ${playerChoice} You Lose, try again!`;
     console.log("Loser");
 }
 
 
 // Game function for gamePlay function to work for playerChoice and compare
 function game(playerChoice) {
-    
+
     const compChoice = genComputerChoice();
-    
+
     if (playerChoice === compChoice) {
-            tie();
-            
-        } else if (playerChoice === "rock" && compChoice === "scissors") {
+        tie();
+
+    } else if (playerChoice === "rock" && compChoice === "scissors") {
         return wins();
-        } else if (playerChoice === "paper" && compChoice === "rock") {
+    } else if (playerChoice === "paper" && compChoice === "rock") {
         return wins();
-        } else if (playerChoice === "scissors" && compChoice === "paper") {
+    } else if (playerChoice === "scissors" && compChoice === "paper") {
         return wins();
-        } else 
-            lose();
-        
-    }
+    } else
+        lose();
+
+}
 
 
 
@@ -70,20 +84,20 @@ function game(playerChoice) {
 function gamePlay() {
 
     // Rock button 
-    rock.addEventListener('click', function() {
+    rock.addEventListener('click', function () {
         game("rock");
-        
-    })
+
+    });
     // Paper button
     paper.addEventListener('click', function () {
         game("paper");
-        
-    })
+
+    });
     // Scissors button
     scissors.addEventListener('click', function () {
         game("scissors");
-        
-    })
+
+    });
 }
 
 // Function to run game
