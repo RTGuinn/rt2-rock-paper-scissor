@@ -3,7 +3,6 @@ let playerScore = 0;
 let computerScore = 0;
 const winner = document.getElementById("win");
 const loser = document.getElementById("loss");
-const scoreArea = document.querySelector(".score-area");
 const result = document.querySelector(".result > p");
 const rock = document.getElementById("rock");
 const paper = document.getElementById("paper");
@@ -20,13 +19,14 @@ function genComputerChoice() {
     // Random choice generator gets own function for necessity in other function
     const randomChoice = Math.floor(Math.random() * 3);
     return choices[randomChoice];
+    
 }
 
 
 function tie(playerChoice, compChoice) {
     
-    result.innerHTML = `${playerChoice} matches ${compChoice} Its a tie, Let's go again :)`;
-    console.log("Its a tie");
+    result.innerHTML = `${playerChoice} matches ${compChoice}. Its a tie, Let's go again :)`;
+    
 }
 
 /**
@@ -38,8 +38,7 @@ function wins(playerChoice, compChoice) {
     playerScore++;
     winner.innerText = playerScore;
     loser.innerHTML = computerScore;
-    result.innerHTML = `${playerChoice} beats ${compChoice} Winner!!!`;
-    console.log("Winner");
+    result.innerHTML = `${playerChoice} beats ${compChoice}. Winner!!!`;
 }
 
 
@@ -51,8 +50,7 @@ function lose(playerChoice, compChoice) {
     computerScore++;
     winner.innerText = playerScore;
     loser.innerHTML = computerScore;
-    result.innerHTML = `${compChoice} beats ${playerChoice} You Lose, try again!`;
-    console.log("Loser");
+    result.innerHTML = `${compChoice} beats ${playerChoice}. You Lose, try again!`;
 }
 
 
@@ -62,16 +60,16 @@ function game(playerChoice) {
     const compChoice = genComputerChoice();
 
     if (playerChoice === compChoice) {
-        tie();
+        tie(playerChoice, compChoice);
 
     } else if (playerChoice === "rock" && compChoice === "scissors") {
-        return wins();
+        return wins(playerChoice, compChoice);
     } else if (playerChoice === "paper" && compChoice === "rock") {
-        return wins();
+        return wins(playerChoice, compChoice);
     } else if (playerChoice === "scissors" && compChoice === "paper") {
-        return wins();
+        return wins(playerChoice, compChoice);
     } else
-        lose();
+        lose(playerChoice, compChoice);
 
 }
 
